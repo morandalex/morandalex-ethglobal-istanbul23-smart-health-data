@@ -1,1 +1,1 @@
-export const YourContract = '0x96ceddfea41f1e43649303978db648bdca65d299' // on scroll network
+export const YourContract = '0xD13DC6A66BD74008167E9c9E39F1301E02983c32' // deploy on scroll sepolia

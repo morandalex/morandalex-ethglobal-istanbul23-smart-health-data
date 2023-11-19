@@ -1,11 +1,7 @@
 //SPDX-License-Identifier: UNLICENSED
 
 
-pragma solidity ^0.8.9;
-
-
-import "hardhat/console.sol";
-
+pragma solidity ^0.8.13;
 
 contract YourContract {
 
@@ -57,7 +53,7 @@ contract YourContract {
 
     }
 
-    function modifyUserHealthRecord(address userAddress,uint districtId, string memory newRecord) public {
+    function modifyUserHealthRecord(address userAddress, string memory newRecord) public {
 //        require(canModify(userAddress,districtId), "Caller does not have permission to modify.");
 //        require(allowedDistricts[userAddress].length != 0, "User is not already added to districts.");
 //        require(bytes(userHealthRecords[userAddress]).length != 0, "User is not already has a health record.");

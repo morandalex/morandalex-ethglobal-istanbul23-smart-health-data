@@ -5,9 +5,11 @@
   "scripts": {
     "chain": "npx hardhat node",
     "compile": "npx hardhat compile",
-    "deploy": "npx hardhat run scripts/deploy.ts --network localhost",
+    "deploy:local": "npx hardhat run scripts/deploy.ts --network localhost",
+    "deploy:scroll": "npx hardhat run scripts/deploy.ts --network scrollSepolia",
     "test": "hardhat test",
-    "remix": "remixd -s $(pwd) -u https://remix.ethereum.org"
+    "remix": "remixd -s $(pwd) -u https://remix.ethereum.org",
+    "verify:scroll": "npx hardhat verify --network scrollSepolia 0xD13DC6A66BD74008167E9c9E39F1301E02983c32"
   },
   "devDependencies": {
     "@ethersproject/abi": "^5.7.0",

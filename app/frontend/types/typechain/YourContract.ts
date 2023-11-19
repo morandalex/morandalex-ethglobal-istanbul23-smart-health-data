@@ -31,7 +31,7 @@ export interface YourContractInterface extends utils.Interface {
     "canModify(address,uint256)": FunctionFragment;
     "getAuthorizationLevelByUserAddress(address,uint256)": FunctionFragment;
     "getDistrictAdressByUserAddress(address,uint256)": FunctionFragment;
-    "modifyUserHealthRecord(address,uint256,string)": FunctionFragment;
+    "modifyUserHealthRecord(address,string)": FunctionFragment;
     "removeFromWhitelist(address)": FunctionFragment;
     "userHealthRecords(address)": FunctionFragment;
     "whitelist(address)": FunctionFragment;
@@ -82,11 +82,7 @@ export interface YourContractInterface extends utils.Interface {
   ): string;
   encodeFunctionData(
     functionFragment: "modifyUserHealthRecord",
-    values: [
-      PromiseOrValue<string>,
-      PromiseOrValue<BigNumberish>,
-      PromiseOrValue<string>
-    ]
+    values: [PromiseOrValue<string>, PromiseOrValue<string>]
   ): string;
   encodeFunctionData(
     functionFragment: "removeFromWhitelist",
@@ -204,7 +200,6 @@ export interface YourContract extends BaseContract {
 
     modifyUserHealthRecord(
       userAddress: PromiseOrValue<string>,
-      districtId: PromiseOrValue<BigNumberish>,
       newRecord: PromiseOrValue<string>,
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<ContractTransaction>;
@@ -266,7 +261,6 @@ export interface YourContract extends BaseContract {
 
   modifyUserHealthRecord(
     userAddress: PromiseOrValue<string>,
-    districtId: PromiseOrValue<BigNumberish>,
     newRecord: PromiseOrValue<string>,
     overrides?: Overrides & { from?: PromiseOrValue<string> }
   ): Promise<ContractTransaction>;
@@ -328,7 +322,6 @@ export interface YourContract extends BaseContract {
 
     modifyUserHealthRecord(
       userAddress: PromiseOrValue<string>,
-      districtId: PromiseOrValue<BigNumberish>,
       newRecord: PromiseOrValue<string>,
       overrides?: CallOverrides
     ): Promise<void>;
@@ -391,7 +384,6 @@ export interface YourContract extends BaseContract {
 
     modifyUserHealthRecord(
       userAddress: PromiseOrValue<string>,
-      districtId: PromiseOrValue<BigNumberish>,
       newRecord: PromiseOrValue<string>,
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<BigNumber>;
@@ -452,7 +444,6 @@ export interface YourContract extends BaseContract {
 
     modifyUserHealthRecord(
       userAddress: PromiseOrValue<string>,
-      districtId: PromiseOrValue<BigNumberish>,
       newRecord: PromiseOrValue<string>,
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<PopulatedTransaction>;

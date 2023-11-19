@@ -118,6 +118,9 @@ export const Layout = ({children, customMeta}: LayoutProps): JSX.Element => {
                     <Text>
                         Project work built for EthGlobal Istanbul hackhathon in 2023 for a better world
                     </Text>
+                    <Text>
+                       Check the github repo  <Link href ="https://github.com/morandalex/morandalex-ethglobal-istanbul23-smart-health-data/tree/main">here</Link>
+                    </Text>
                     <Text mb="4">
                         Built by{' '}
                         <Link href="https://www.abeatbeyond.com"><i>Alessandro Morandi & Giulia Barozzi</i></Link>
